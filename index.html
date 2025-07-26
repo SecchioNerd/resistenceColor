@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colori e Resistori</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+    background-color: rgb(136, 136, 136);
+}
+header{
+    background-color: rgb(70, 70, 70);
+    border-radius: 20px;
+    padding: 1px;
+}
+footer{
+    
+    display: flex;
+    gap:27%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-color: azure;
+
+    position: fixed;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+}
+h1{
+    color: chartreuse;
+    text-align: center;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: 10px;
+}
+h2{
+    color: chartreuse;
+    text-align: center;
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 10px;
+}
+h3{
+    color: chartreuse;
+    text-align: left;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 10px;
+    margin-left: 20px;
+}
+button{
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+
+p{
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 20px;
+    margin: 50px;
+}
+main{
+    background-color: rgb(245, 200, 146);
+    width: 700px;
+    height: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 500px;
+    padding: 80px;
+    padding-left: 100px;
+    padding-top: 10px;
+    border: 2px solid black;
+}
+hr{
+    background-color: rgb(255, 255, 255);
+    height:5px;
+    border-radius: 5px;
+    margin:30px;
+}
+.container {
+    margin-top: 100px;
+    float: right;
+    margin-right: 50px;
+    display: flex;
+    gap: 10%; /* Spazio tra i div */
+}
+
+
+.box {
+    width: 50px;
+    height: 200px;
+    text-align: center;
+    line-height: 10px;
+    background-color: rgb(245, 200, 146);
+}
+
+.sottomenu{
+    list-style: none;
+    position: relative;
+    display: none;
+    border-left:2px solid white;
+    border-top: 2px solid white;
+    border-right:2px solid rgb(0, 0, 0);
+    border-bottom:2px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(39, 39, 39, 0.5);
+    color:rgb(255, 255, 255);
+    background-color: rgb(124, 124, 124);
+    margin-left:10px;
+    margin-right:300px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.sottomenu > li{
+    color:rgb(255, 255, 255);
+    padding: 3px;
+    font-family: monospace;
+}
+
+
+.menu{
+    margin: 0%;
+}
+.menu h3:hover{
+    color:rgb(255, 255, 255);
+}
+.menu > h3:hover +.sottomenu{
+    display: block;
+}
+.menu:hover .sottomenu{
+    display: block;
+}
+.sottomenu >li:hover{
+    color:chartreuse;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Calcolatore di Resistenza</h1>
+    </header>
+    <br><br><br>
+
+    
+    <main class="container">
+        <div class="box" id="id1">
+            <p style="color:black">1</p>
+            
+        </div>
+        <div class="box" id="id2">
+            <p style="color:black">2</p>
+            
+        </div>
+        <div class="box" id="id3">
+            <p style="color:black">3</p>
+            
+        </div>
+        <div class="box" id="id4">
+            <p style="color:black">4</p>
+            
+        </div>
+        <div class="box" id="id5">
+            <p style="color:black">5</p>
+            
+        </div>
+        <div class="box" id="id6">
+            <p style="color:black">6</p>
+            
+        </div>
+    </main>
+
+    <div style="margin: 30px;margin-right:1000px;background-color:rgb(70, 70, 70);;border-radius: 10px;padding: 10px;">
+        <p>inserire i colori nelle apposite caselle:</p>
+        
+        <div class="menu">
+            <h3>colore 1: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(1,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(1,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(1,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(1,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(1,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(1,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(1,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(1,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(1,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(1,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(1,9)">bianco</button></li>
+                <li><button id="1" onclick="inputColore(1,11)">argento</button></li>
+                <li><button id="1" onclick="inputColore(1,12)">oro</button></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>colore 2: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(2,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(2,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(2,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(2,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(2,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(2,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(2,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(2,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(2,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(2,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(2,9)">bianco</button></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>colore 3: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(3,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(3,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(3,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(3,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(3,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(3,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(3,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(3,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(3,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(3,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(3,9)">bianco</button></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>colore 4: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(4,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(4,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(4,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(4,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(4,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(4,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(4,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(4,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(4,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(4,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(4,9)">bianco</button></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>colore 5: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(5,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(5,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(5,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(5,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(5,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(5,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(5,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(5,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(5,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(5,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(5,9)">bianco</button></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <h3>colore 6: </h3>
+            <ul class="sottomenu">
+                <li><button id="1" onclick="inputColore(6,10)">nulla</button></li>
+                <li><button id="1" onclick="inputColore(6,0)">nero</button></li>
+                <li><button id="1" onclick="inputColore(6,1)">marrone</button></li>
+                <li><button id="1" onclick="inputColore(6,2)">rosso</button></li>
+                <li><button id="1" onclick="inputColore(6,3)">arancione</button></li>
+                <li><button id="1" onclick="inputColore(6,4)">giallo</button></li>
+                <li><button id="1" onclick="inputColore(6,5)">verde</button></li>
+                <li><button id="1" onclick="inputColore(6,6)">blu</button></li>
+                <li><button id="1" onclick="inputColore(6,7)">viola</button></li>
+                <li><button id="1" onclick="inputColore(6,8)">grigio</button></li>
+                <li><button id="1" onclick="inputColore(6,9)">bianco</button></li>
+                <li><button id="1" onclick="inputColore(6,11)">argento</button></li>
+                <li><button id="1" onclick="inputColore(6,12)">oro</button></li>
+            </ul>
+        </div>
+        
+    </div>
+
+    
+
+    
+    
+
+<br><br><hr>
+    <div style="margin: 30px;background-color:rgb(70, 70, 70);;border-radius: 10px;padding: 10px;">
+        <h2>Risultati:</h2>
+        <p id="ris1">
+            resistenzza da sinistra a destra : <br>
+            errore da sinistra a destra :
+        </p>
+
+        <p id="ris2">
+            resistenzza da destra a sinistra : <br>
+            errore da destra a sinistra :
+        </p>
+    </div>
+
+    <!-- <footer>
+        <div style="width: 200px;"><h3 style="color:white">Associazione: SigmaToniolo</h3></div>
+        <div style="width: 400px;"><h3 style="color:white">BY<br> Toniolo Lorenzo</h3></div>
+        <div style="width: 200px;"><h1 style="color:white;text-align: right;margin-right: 20px;">ΣToniolo</h1></div>
+        
+    </footer> -->
+
+    <script>
+        let colori = [10,10,10,10,10,10];
+
+
+        function inputColore(pul,colore){
+            colori[pul-1] = colore;
+            let conta = 0;
+
+            let id = "id" + pul;
+
+            switch (colore){
+                case 0:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:black"><p style="color:black">'+pul+'</p></div>';
+                    break;
+                case 1:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(86, 60, 0);"><p style="color:black">'+pul+'</p></div>';
+                    break;
+                case 2:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(255,0,0);"><p style="color:black";>'+pul+'</p></div>';
+                    break;
+                case 3:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(255, 106, 0);"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 4:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(255, 242, 0);"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 5:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(44, 212, 2);"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 6:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(0,0,255)"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 7:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(157, 0, 171);"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 8:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(117, 117, 117);"><p style="color:black">'+pul+'</p></div>';
+                    break;
+                case 9:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:white"><p style="color:black">'+pul+'</p></div>';
+                    break;
+                case 10:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(245, 200, 146)"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 11:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(194, 194, 194)"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+                case 12:
+                    document.getElementById(id).innerHTML = '<div class="box" style="background-color:rgb(219, 186, 0);"><p style="color:black;">'+pul+'</p></div>';
+                    break;
+
+                
+            }
+
+            for(i=0;i<6;i++){
+                if(colori[i]!==10){
+                    conta++;
+                }
+            }
+            //console.log(conta);
+            
+            if(conta>=3){
+                const coloriTot = [];
+                let x = 0;
+                for(i=0;i<conta;i++){
+                    if(colori[x]==10){
+                        i--;
+                    }
+                    else{
+                        coloriTot[i]=colori[x];
+                    }
+                    x++;
+
+                    
+                }
+                //window.alert(coloriTot.length);
+                conta=0;
+                calcolaResistenza(coloriTot);
+            }
+            else{
+                conta=0;
+                document.getElementById("ris1").innerHTML = '<p id="ris1">resistenzza da sinistra a destra : ---- Ohm<br>errore da sinistra a destra : ---- Ohm</p>';
+
+                document.getElementById("ris2").innerHTML = '<p id="ris2">resistenzza da destra a sinistra : ---- Ohm<br>errore da destra a sinistra : ---- Ohm</p>';
+            }
+
+
+            //serve una switch case per cambiare colore graficamente al resistore  
+        }
+
+        function calcolaResistenza(col=[]){
+            let resistenza;
+            let errore;
+            let resistenzaInv;
+            let erroreInv;
+
+            let lunghezza = col.length;
+
+            switch (lunghezza){
+                case 3:
+                    resistenza=(col[0]*10+col[1])*(10**col[2]);
+                    resistenzaInv=(col[2]*10+col[1])*(10**col[0]);
+                    break;
+                case 4:
+                    resistenza=(col[0]*10+col[1])*(10**col[2]);
+                    resistenzaInv=(col[3]*10+col[2])*(10**col[1]);
+                    break;
+                case 5:
+                    resistenza=(col[0]*100+col[1]*10+col[2])*(10**col[3]);
+                    resistenzaInv=(col[4]*100+col[3]*10+col[2])*(10**col[1]);
+                    break;
+                case 6:
+                    resistenza=(col[0]*100+col[1]*10+col[2])*(10**col[3]);
+                    resistenzaInv=(col[4]*100+col[3]*10+col[2])*(10**col[1]);
+                    break;
+            }
+
+            //console.log(resistenza);
+            if(lunghezza==3){
+                document.getElementById("ris1").innerHTML ='<p id="ris1">resistenzza da sinistra a destra : '+resistenza+' Ohm<br>errore da sinistra a destra : ---- %</p>'
+                document.getElementById("ris2").innerHTML = '<p id="ris2">resistenzza da destra a sinistra : '+resistenzaInv+' Ohm <br>errore da destra a sinistra : ---- %</p>';
+            }
+            else{
+                switch (col[lunghezza-1]){
+                    case 1:
+                        errore=1.0;
+                        break;
+                    case 2:
+                        errore=2.0;
+                        break;
+                    case 5:
+                        errore=0.5;
+                        break;
+                    case 6:
+                        errore=0.25;
+                        break;
+                    case 7:
+                        errore=0.1;
+                        break;
+                    case 8:
+                        errore=0.05;
+                        break;
+                    case 11:
+                        errore=10.0;
+                        break;
+                    case 12:
+                        errore=5.0;
+                        break;
+
+                    default:
+                        errore = 0.0;
+                        break;
+                }
+
+                switch (col[0]){
+                    case 1:
+                        erroreInv=1.0;
+                        break;
+                    case 2:
+                        erroreInv=2.0;
+                        break;
+                    case 5:
+                        erroreInv=0.5;
+                        break;
+                    case 6:
+                        erroreInv=0.25;
+                        break;
+                    case 7:
+                        erroreInv=0.1;
+                        break;
+                    case 8:
+                        erroreInv=0.05;
+                        break;
+                    case 11:
+                        erroreInv=10.0;
+                        break;
+                    case 12:
+                        erroreInv=5.0;
+                        break;
+
+                    default:
+                        erroreInv = 0;
+                        break;
+                }
+
+                if(errore == 0.0){
+                    document.getElementById("ris1").innerHTML ='<p id="ris1">resistenzza da sinistra a destra : '+resistenza+' Ohm<br>errore da sinistra a destra : ---- %<br><strong style="color:chartreuse">probabile che la misura corretta sia quella sottostante</strong></p>'
+                }
+                else{
+                    document.getElementById("ris1").innerHTML ='<p id="ris1">resistenzza da sinistra a destra : '+resistenza+' Ohm<br>errore da sinistra a destra : ±'+errore+' %</p>'
+                }
+
+                if(erroreInv == 0.0){
+                    document.getElementById("ris2").innerHTML = '<p id="ris2">resistenzza da destra a sinistra : '+resistenzaInv+' Ohm <br>errore da destra a sinistra : ---- %<br><strong style="color:chartreuse">probabile che la misura corretta sia quella soprastane</strong></p>';
+                }
+                else{
+                    document.getElementById("ris2").innerHTML = '<p id="ris2">resistenzza da destra a sinistra : '+resistenzaInv+' Ohm <br>errore da destra a sinistra : ±'+erroreInv+' %</p>';
+                }
+            }
+            
+
+            
+        }
+
+        //console.log(nome);
+    </script>
+</body>
+</html>
