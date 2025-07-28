@@ -1,5 +1,12 @@
 # 🔨 Calcolatore di Resistenza
 
+[🔗 Visita il sito](https://secchionerd.github.io/resistenceColor/)
+
 Una calcolatrice interattiva per calcolare il valore delle resistenze.
 
-Version 1.0.0
+## 🔢 Funzionalità
+
+- Supporto a resistori con 4, 5 o 6 bande.
+- Calcolo automatico del valore resistivo.
+- Correzione automatica del verso.
+- Design semplice e responsivo.
