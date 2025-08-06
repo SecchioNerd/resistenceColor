@@ -78,9 +78,9 @@ function inputColore(pul, colore) {
     }
     else {
         conta = 0;
-        document.getElementById("ris1").innerHTML = '<p id="ris1">resistenzza da sinistra a destra : ---- Ohm<br>errore da sinistra a destra : ---- Ohm</p>';
+        document.getElementById("ris1").innerHTML = '<p id="ris1">Resistenza da sinistra a destra: ---- Ohm<br>Errore da sinistra a destra: ---- Ohm</p>';
 
-        document.getElementById("ris2").innerHTML = '<p id="ris2">resistenzza da destra a sinistra : ---- Ohm<br>errore da destra a sinistra : ---- Ohm</p>';
+        document.getElementById("ris2").innerHTML = '<p id="ris2">Resistenza da destra a sinistra: ---- Ohm<br>Errore da destra a sinistra: ---- Ohm</p>';
     }
 
 
